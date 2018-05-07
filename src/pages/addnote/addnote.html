@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>New Note</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="discard()">
+        Discard
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="note.Title" placeholder="Title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <textarea #myInput id="myInput" rows="5" (keyup)="resize()" [(ngModel)]="note.Content.Message" placeholder="Note"></textarea>
+  </ion-item>
+</ion-content>
